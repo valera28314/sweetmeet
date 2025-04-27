@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Реєстрація | SweetMeet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex items-center justify-center">
+    <form method="POST" enctype="multipart/form-data" class="bg-gray-800 p-8 rounded shadow-md space-y-4 w-full max-w-md">
+        <h1 class="text-2xl font-bold text-center mb-4">Реєстрація</h1>
+        <input type="text" name="username" placeholder="Ім'я користувача" class="w-full p-3 rounded bg-gray-700" required>
+        <input type="email" name="email" placeholder="Email" class="w-full p-3 rounded bg-gray-700" required>
+        <input type="password" name="password" placeholder="Пароль" class="w-full p-3 rounded bg-gray-700" required>
+        <input type="file" name="photo" class="w-full text-white" required>
+        <button type="submit" class="bg-blue-600 hover:bg-blue-700 w-full py-2 rounded font-bold">Зареєструватися</button>
+        <div class="text-center mt-2">
+            Вже маєте акаунт? <a href="/login" class="text-blue-400 hover:underline">Увійти</a>
+        </div>
+    </form>
+</body>
+</html>

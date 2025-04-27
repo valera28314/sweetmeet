@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Кабінет | SweetMeet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white min-h-screen p-8">
+    <div class="flex justify-between items-center mb-6">
+        <h1 class="text-3xl font-bold">Користувачі</h1>
+        <a href="/logout" class="bg-red-600 hover:bg-red-700 py-2 px-4 rounded font-bold">Вийти</a>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {% for user in users %}
+        <div class="bg-gray-800 p-4 rounded text-center">
+            <img src="/uploads/{{ user[2] }}" alt="Фото профілю" class="w-24 h-24 mx-auto rounded-full mb-2 object-cover">
+            <h2 class="text-lg font-bold mb-2">{{ user[1] }}</h2>
+            <a href="/message/{{ user[0] }}" class="bg-blue-600 hover:bg-blue-700 py-2 px-4 rounded font-bold inline-block">Написати</a>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
